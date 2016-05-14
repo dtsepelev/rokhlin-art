@@ -1,0 +1,49 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "meteor": true,
+    "es6": true
+  },
+
+  "rules": {
+    "quotes": [2, "single"],
+    "react/jsx-quotes": 0,
+    "jsx-quotes": [2, "prefer-single"],
+    "eol-last": [0],
+    "no-mixed-requires": [0],
+    "no-underscore-dangle": [0],
+    "no-extra-strict": 0,
+    "strict": 0,
+    "curly": [0],
+    "semi": [2, "never"],
+    "import/no-unresolved": [2, { ignore: ["^meteor*"] }],
+    "import/export": 2,
+    "import/named": 2,
+    "import/namespace": 2,
+    "import/default": 2
+  },
+
+  "globals": {
+  	"React": true
+  },
+
+  "ecmaFeatures": {
+  	"jsx": true,
+  	"modules": true
+  },
+
+  "plugins": [
+  	"react"
+  ],
+
+  "settings": {
+  	"import/ignore": ["node_modules", \.(scss|less|mss)$],
+  	"import/resolver": {
+  		"meteor": {
+  			"extensions": [".js", ".jsx"]
+  		}
+  	}
+  }
+}

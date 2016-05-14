@@ -1,0 +1,5 @@
+node_modules/
+.deploy
+imports/startup/server/data.js
+public/gallery
+rokhlin.sublime-workspace

@@ -1,0 +1,53 @@
+{
+  "name": "rokhlin",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-import-resolver-meteor": "0.0.6",
+    "eslint-plugin-import": "^1.6.1",
+    "eslint-plugin-jsx-a11y": "^1.0.4",
+    "eslint-plugin-react": "^5.0.1",
+    "find-root": "^1.0.0",
+    "postcss-modules-extract-imports": "^1.0.0",
+    "postcss-modules-local-by-default": "^1.0.1",
+    "postcss-modules-scope": "^1.0.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^1.2.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "imagesloaded": "^4.1.0",
+    "meteor-node-stubs": "~0.2.0",
+    "react": "^15.0.1",
+    "react-addons-pure-render-mixin": "^15.0.2",
+    "react-dom": "^15.0.1",
+    "react-komposer": "^1.8.0",
+    "react-loader": "^2.4.0",
+    "react-masonry-component": "^4.0.4",
+    "react-mounter": "^1.2.0",
+    "smoothscroll": "^0.2.2"
+  },
+  "cssModules": {
+    "extensions": [
+      "mss"
+    ],
+    "postcssPlugins": {
+      "postcss-simple-vars": {
+        "fileOptions": [
+          "client/styles/_variables.scss"
+        ]
+      },
+      "postcss-nested": {},
+      "postcss-modules-local-by-default": {},
+      "postcss-modules-extract-imports": {},
+      "postcss-modules-scope": {},
+      "autoprefixer": {}
+    }
+  }
+}

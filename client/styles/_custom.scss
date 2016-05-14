@@ -1,0 +1,64 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Open sans', sans-serif;
+    font-weight: $fontWeightNormal;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $grey-base;
+    @include font-smoothing(on);
+    margin-bottom: 60px;
+}
+
+p {
+    text-indent: 32px;
+    margin: 0px;
+}
+
+.firstLine {
+    text-indent: 0px;
+}
+
+.caption {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+@media (min-width: $desktophd) {
+    .caption {
+        font-size: 16px;
+    }
+}
+
+h1,
+.h1 {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: $fontWeightBold;
+    margin: 0;
+}
+
+h2,
+.h2 {
+    font-size: inherit;
+    font-weight: $fontWeightBold;
+    margin: 0;
+    margin-bottom: 18px;
+}
+
+@media (min-width: $desktop) {
+    h2,
+    .h2 {
+        margin-bottom: 24px;
+    }
+}
+
+@media (min-width: $tablet) {
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
