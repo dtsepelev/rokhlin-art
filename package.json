@@ -28,7 +28,6 @@
     "react-addons-pure-render-mixin": "15.0.2",
     "react-dom": "15.0.1",
     "react-komposer": "1.8.0",
-    "react-loader": "2.4.0",
     "react-masonry-component": "4.0.4",
     "react-mounter": "1.2.0",
     "smoothscroll": "0.2.2"

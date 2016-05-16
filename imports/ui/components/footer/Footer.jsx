@@ -12,7 +12,7 @@ const classes = {
 export const Footer = () => (
   <footer className={classes.main}>
     <div className={classes.wrapper}>
-      <span className={classes.love}>Сделано с &lt;3 в Санкт-Петербурге</span>
+      <span className={classes.love}>Made with love in Saint-Petersburg</span>
       <span className={classes.copyright}>Copyright © 2016 Alexander Rokhlin</span>
     </div>
   </footer>
