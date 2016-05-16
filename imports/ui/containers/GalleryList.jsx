@@ -1,11 +1,10 @@
 import React from 'react'
 import { composeWithTracker } from 'react-komposer'
-import Loader from 'react-loader'
 
 import { Catalog } from '/imports/ui/components/catalog/Catalog.jsx'
 import { Galleries } from '/imports/api/galleries/galleries.js'
 import { Pictures } from '/imports/api/pictures/pictures.js'
-import { spinnerOptions } from '/imports/ui/components/spinner/spinner.jsx'
+import { Loader } from '/imports/ui/components/loader/Loader.jsx'
 
 function composer(props, onData) {
   const handle = Meteor.subscribe('galleries')
@@ -21,6 +20,6 @@ function composer(props, onData) {
   }
 }
 
-const loading = () => (<div><Loader options={spinnerOptions} /></div>)
+const loading = () => (<div><Loader /></div>)
 
 export default composeWithTracker(composer)(Catalog, loading)
