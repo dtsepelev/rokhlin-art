@@ -8,6 +8,6 @@ const classes = {
 
 export const Loader = () => (
   <div className={classes.main}>
-    Загружаем...
+    Загружаем
   </div>
 )
