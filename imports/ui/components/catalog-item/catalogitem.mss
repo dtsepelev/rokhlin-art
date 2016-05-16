@@ -8,6 +8,16 @@
 	padding-bottom: 4px;
 }
 
+.hidden {
+	opacity: 0;
+	cursor: default;
+	pointer-events: none;
+}
+
+.visible {
+	opacity: 1;
+}
+
 @media (min-width: $tablet) {
 	.img {
 		padding-bottom: 6px;
