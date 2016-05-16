@@ -7,12 +7,20 @@
 }
 
 .wrapper {
-    padding-top: 22px;
+    padding-top: 18px;
 }
-
 
 @media (min-width: $tablet) {
     .copyright {
         float: right;
+    }
+}
+
+@media (min-width: $desktophd) {
+    .main {
+        height: 144px;
+    }
+    .wrapper {
+        padding-top: 42px;
     }
 }
