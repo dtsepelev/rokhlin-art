@@ -15,9 +15,3 @@
 		margin-bottom: 36px;
 	}
 }
-
-@media (min-width: $desktophd) {
-	.image {
-		margin-bottom: 36px;
-	}
-}

@@ -39,7 +39,7 @@
     }
 }
 
-@media (min-width: $desktophd) {
+@media (min-width: $desktopmax) {
     .main {
         padding-top: 63px;
         padding-bottom: 45px;

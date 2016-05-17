@@ -6,7 +6,7 @@
     margin-bottom: -50px;
 }
 
-@media (min-width: $desktophd) {
+@media (min-width: $desktopmax) {
     .masonry {
         margin-bottom: -66px;
     }

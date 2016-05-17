@@ -56,7 +56,8 @@
 
 @media (min-width: $desktophd) {
     .container {
-        width: $desktophd;
+        width: 100%;
+        max-width: 1440px;
         padding-left: 112px;
         padding-right: 112px;
     }

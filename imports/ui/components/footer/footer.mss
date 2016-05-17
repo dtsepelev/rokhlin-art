@@ -16,7 +16,7 @@
     }
 }
 
-@media (min-width: $desktophd) {
+@media (min-width: $desktopmax) {
     .main {
         height: 144px;
     }

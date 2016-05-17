@@ -24,7 +24,7 @@
 	}
 }
 
-@media (min-width: $desktophd) {
+@media (min-width: $desktopmax) {
 	.main {
 		margin-bottom: 66px;
 	}
