@@ -3,12 +3,14 @@ import React, { PropTypes } from 'react'
 export const Text = ({ description }) => (
   <div>
     {description ?
-      description.split('\n').map((text, i) => {
-        if (i === 0) {
-          return <p className='firstLine'>{text}</p>
-        }
-        return <p>{text}</p>
-      }) : null
+      description.split('\n').map((text, i) => (
+        <p
+          className={(i === 0) ? 'firstLine' : null}
+          key={`descr${i}`}
+        >
+          {text}
+        </p>
+      )) : null
     }
   </div>
 )
