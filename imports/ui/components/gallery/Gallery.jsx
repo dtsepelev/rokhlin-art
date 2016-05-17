@@ -77,11 +77,15 @@ export class Gallery extends Component {
   }
 
   handleScroll() {
-    if (this.getScrollTop() < this.getDocumentHeight() - window.innerHeight)
+    if (this.getScrollTop() < this.getDocumentHeight() - window.innerHeight - 200)
       return
 
     // Break if there is nothing to load
     if (this.props.pictures.length < this.state.imagesToLoad + 1)
+      return
+
+    // Break if already loading
+    if (!this.state.imagesLoaded)
       return
 
     // Load more images

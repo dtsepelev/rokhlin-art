@@ -26,7 +26,7 @@ export class Catalog extends Component {
 
     this.state = {
       imagesLoaded: false,
-      galleriesToLoad: 10,
+      galleriesToLoad: 11,
     }
 
     this.masonryRef = this.masonryRef.bind(this)
@@ -73,11 +73,15 @@ export class Catalog extends Component {
   }
 
   handleScroll() {
-    if (this.getScrollTop() < this.getDocumentHeight() - window.innerHeight)
+    if (this.getScrollTop() < this.getDocumentHeight() - window.innerHeight - 200)
       return
 
     // Break if there is nothing to load
     if (this.props.galleries.length < this.state.galleriesToLoad + 1)
+      return
+
+    // Break if already loading
+    if (!this.state.imagesLoaded)
       return
 
     // Load more galleries
