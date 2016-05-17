@@ -3,6 +3,7 @@
 import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 import smoothScroll from 'smoothscroll'
+import RetinaImage from 'react-retina-image'
 
 import { styles } from './picture.mss'
 
@@ -31,7 +32,8 @@ export class Picture extends Component {
     // of update was resizing
     if (this.state.resizing) {
       this.props.handleResize()
-      smoothScroll(this.refs.picture, 500)
+      const refs = this.refs.picture.refs
+      smoothScroll(refs.img, 500)
       this.setState({ resizing: false })
     }
   }
@@ -61,9 +63,10 @@ export class Picture extends Component {
 
     return (
       <a className={classes.main} onClick={this.handleZoom}>
-        <img
+        <RetinaImage
           src={this.props.url}
           alt={this.props.name}
+          checkIfRetinaImgExists={false}
           className={classes.img}
           ref='picture'
         />

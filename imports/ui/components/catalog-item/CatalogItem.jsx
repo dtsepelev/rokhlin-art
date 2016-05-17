@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import { FlowRouter } from 'meteor/kadira:flow-router'
 import classNames from 'classnames/bind'
+import RetinaImage from 'react-retina-image'
 
 import { styles } from './catalogitem.mss'
 
@@ -25,9 +26,10 @@ export const CatalogItem = ({ name, cover, slug, hidden }) => {
       className={classes.main}
       href={FlowRouter.path('gallery', { slug })}
     >
-      <img
+      <RetinaImage
         src={cover}
         alt={name}
+        checkIfRetinaImgExists={false}
         className={classes.img}
       />
       <span>{name}</span>

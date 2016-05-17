@@ -10,6 +10,7 @@
 
 .img {
     width: 100%;
+    height: auto;
     padding-bottom: 4px;
 }
 
