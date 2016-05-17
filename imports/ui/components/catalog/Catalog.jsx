@@ -121,12 +121,11 @@ export class Catalog extends Component {
       }
 
       return (
-        <div>
+        <div key={gallery._id}>
           {loader}
           <CatalogItem
             name={gallery.name}
             cover={gallery.cover}
-            key={gallery._id}
             slug={gallery.slug}
             hidden={hidden}
           />
@@ -140,6 +139,7 @@ export class Catalog extends Component {
           id='masonry'
           options={masonryOptions}
           className={classes.masonry}
+          ref={this.masonryRef}
         >
           {galleries}
         </Masonry>

@@ -125,12 +125,11 @@ export class Gallery extends Component {
       }
 
       return (
-        <div>
-          <div>{loader}</div>
+        <div key={picture._id}>
+          {loader}
           <Picture
             name={picture.name}
             url={picture.url}
-            key={picture._id}
             handleResize={this.handleResize}
             className='masonryItem'
             hidden={hidden}
