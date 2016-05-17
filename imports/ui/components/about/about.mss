@@ -10,7 +10,13 @@
 	width: 100%;
 }
 
-@media (max-width: : $tablet) {
+@media (max-width: $tablet) {
+	.image {
+		margin-bottom: 36px;
+	}
+}
+
+@media (min-width: $desktophd) {
 	.image {
 		margin-bottom: 36px;
 	}
