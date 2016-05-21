@@ -26,7 +26,7 @@ export class Catalog extends Component {
 
     this.state = {
       imagesLoaded: false,
-      galleriesToLoad: 11,
+      galleriesToLoad: 10,
     }
 
     this.masonryRef = this.masonryRef.bind(this)
@@ -39,7 +39,7 @@ export class Catalog extends Component {
     imagesLoaded('#masonry', () => {
       Meteor.setTimeout(() => {
         this.setState({ imagesLoaded: true })
-      }, 200)
+      }, 100)
     })
   }
 

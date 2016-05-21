@@ -18,7 +18,7 @@ export const CatalogItem = ({ name, cover, slug, hidden }) => {
 
   classes.main = classNames(imgState,
                             'col-sm-6',
-                            styles.main,
+                           styles.main,
                             'masonryItem')
 
   return (
@@ -29,7 +29,6 @@ export const CatalogItem = ({ name, cover, slug, hidden }) => {
       <RetinaImage
         src={cover}
         alt={name}
-        checkIfRetinaImgExists={false}
         className={classes.img}
       />
       <span>{name}</span>
