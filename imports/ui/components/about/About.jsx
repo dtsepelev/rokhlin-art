@@ -1,8 +1,10 @@
 /* eslint max-len: 0 */
 
 import React from 'react'
-import { styles } from './about.mss'
 import classNames from 'classnames'
+import RetinaImage from 'react-retina-image'
+
+import { styles } from './about.mss'
 import { Text } from '../text/Text.jsx'
 
 const classes = {
@@ -21,10 +23,18 @@ export const About = () => (
   <div>
     <div className={classes.imagesTop}>
       <div>
-        <img src='/images/am1.jpg' role='presentation' className={classes.image} />
+        <RetinaImage
+          src='/images/am1.jpg'
+          role='presentation'
+          className={classes.image}
+        />
       </div>
       <div>
-        <img src='/images/am2.jpg' role='presentation' className={classes.image} />
+        <RetinaImage
+          src='/images/am2.jpg'
+          role='presentation'
+          className={classes.image}
+        />
       </div>
     </div>
     <div className={classes.bio}>
@@ -32,10 +42,18 @@ export const About = () => (
     </div>
     <div className={classes.imagesBottom}>
       <div className={classes.imageWrapper}>
-        <img src='/images/am1.jpg' role='presentation' className={classes.image} />
+        <RetinaImage
+          src='/images/am1.jpg'
+          role='presentation'
+          className={classes.image}
+        />
       </div>
       <div className={classes.imageWrapper}>
-        <img src='/images/am2.jpg' role='presentation' className={classes.image} />
+        <RetinaImage
+          src='/images/am2.jpg'
+          role='presentation'
+          className={classes.image}
+        />
       </div>
     </div>
   </div>
