@@ -15,7 +15,7 @@ const description = 'Автор с пониманием и благодарно�
 export const Contact = () => (
   <div>
     <div className={classes.email}>
-      <a href='mailto:artist@rokhlinart.com'>artist@rokhlinart.com</a>
+      <a href='mailto:info@rokhlinart.com'>info@rokhlinart.com</a>
     </div>
     <div className={classes.text}>
       <Text description={description} />
