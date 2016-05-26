@@ -34,6 +34,8 @@ export class Catalog extends Component {
   }
 
   componentDidMount() {
+    document.title = Meteor.settings.public.title
+
     window.addEventListener('scroll', this.handleScroll)
 
     imagesLoaded('#masonry', () => {

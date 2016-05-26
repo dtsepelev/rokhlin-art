@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react'
 import Masonry from 'react-masonry-component'
 import classNames from 'classnames'
 import imagesLoaded from 'imagesloaded'
+import { Meteor } from 'meteor/meteor'
 
 import { Picture } from '../picture/Picture.jsx'
 import { Text } from '../text/Text.jsx'
@@ -38,6 +39,8 @@ export class Gallery extends Component {
   }
 
   componentDidMount() {
+    document.title = `${Meteor.settings.public.title} - ${this.props.gallery.name}`
+
     window.addEventListener('scroll', this.handleScroll)
 
     imagesLoaded('#masonry', () => {

@@ -1,6 +1,6 @@
 /* eslint max-len: 0 */
 
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 import { Text } from '../text/Text.jsx'
 
@@ -12,13 +12,22 @@ const classes = {
 
 const description = 'Автор с пониманием и благодарностью примет конструктивные предложения и замечания. Хотя нужно помнить, что художника обидеть каждый может, а ласковое слово и ему приятно.'
 
-export const Contact = () => (
-  <div>
-    <div className={classes.email}>
-      <a href='mailto:info@rokhlinart.com'>info@rokhlinart.com</a>
-    </div>
-    <div className={classes.text}>
-      <Text description={description} />
-    </div>
-  </div>
-)
+
+export class Contact extends Component {
+  componentDidMount() {
+    document.title = `${Meteor.settings.public.title} - Контакты`
+  }
+
+  render() {
+    return (
+      <div>
+        <div className={classes.email}>
+          <a href='mailto:info@rokhlinart.com'>info@rokhlinart.com</a>
+        </div>
+        <div className={classes.text}>
+          <Text description={description} />
+        </div>
+      </div>
+    )
+  }
+}
