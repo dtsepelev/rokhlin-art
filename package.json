@@ -41,7 +41,7 @@
     "postcssPlugins": {
       "postcss-simple-vars": {
         "fileOptions": [
-          "client/styles/_variables.scss"
+          "client/imports/variables.scss"
         ]
       },
       "postcss-nested": {},
