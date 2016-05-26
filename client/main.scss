@@ -1,7 +1,7 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic);
-@import './variables';
-@import './base';
-@import './grid';
-@import './mixins';
-@import './custom';
+@import 'imports/variables';
+@import 'imports/base';
+@import 'imports/grid';
+@import 'imports/mixins';
+@import 'imports/custom';
