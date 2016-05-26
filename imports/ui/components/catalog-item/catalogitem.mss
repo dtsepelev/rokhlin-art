@@ -1,6 +1,13 @@
 .main {
-	cursor: pointer;
 	margin-bottom: 50px;
+}
+
+
+.imgWrapper:hover {
+	cursor: pointer;
+	span {
+		border-bottom: 1px solid $grey-base;
+	}
 }
 
 .img {

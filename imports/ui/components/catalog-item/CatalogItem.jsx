@@ -8,6 +8,7 @@ import { styles } from './catalogitem.mss'
 
 const classes = {
   img: styles.img,
+  imgWrapper: styles.imgWrapper,
 }
 
 export const CatalogItem = ({ name, cover, slug, hidden }) => {
@@ -22,17 +23,19 @@ export const CatalogItem = ({ name, cover, slug, hidden }) => {
                             'masonryItem')
 
   return (
-    <a
+    <div
       className={classes.main}
-      href={FlowRouter.path('gallery', { slug })}
+      onClick={() => { FlowRouter.go('gallery', { slug }) }}
     >
-      <RetinaImage
-        src={cover}
-        alt={name}
-        className={classes.img}
-      />
-      <span>{name}</span>
-    </a>
+      <div className={classes.imgWrapper}>
+        <RetinaImage
+          src={cover}
+          alt={name}
+          className={classes.img}
+        />
+        <span>{name}</span>
+      </div>
+    </div>
   )
 }
 

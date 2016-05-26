@@ -1,14 +1,16 @@
 .main {
-    cursor: zoom-in;
     margin-bottom: 50px;
     display: inline-block;
 }
 
 .main_zoomed {
-    cursor: zoom-out;
+    .img {
+    	cursor: zoom-out;
+    }
 }
 
 .img {
+	cursor: zoom-in;
     width: 100%;
     height: auto;
     padding-bottom: 4px;

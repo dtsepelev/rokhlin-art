@@ -62,7 +62,7 @@ export class Picture extends Component {
                               'masonryItem')
 
     return (
-      <a className={classes.main} onClick={this.handleZoom}>
+      <div className={classes.main} onClick={this.handleZoom}>
         <RetinaImage
           src={this.props.url}
           alt={this.props.name}
@@ -71,7 +71,7 @@ export class Picture extends Component {
           ref='picture'
         />
         <span className={classes.caption}>{this.props.name}</span>
-      </a>
+      </div>
     )
   }
 }
