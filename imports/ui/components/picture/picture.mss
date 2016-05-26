@@ -1,6 +1,11 @@
 .main {
     margin-bottom: 50px;
     display: inline-block;
+    pointer-events: none;
+}
+
+@media (min-width: $tablet) {
+	pointer-events: auto;
 }
 
 .main_zoomed {
