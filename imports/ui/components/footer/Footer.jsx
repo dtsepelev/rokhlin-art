@@ -7,12 +7,13 @@ const classes = {
   wrapper: classNames(styles.wrapper, 'container'),
   love: 'hidden-xs',
   copyright: styles.copyright,
+  loveIcon: styles.loveIcon,
 }
 
 export const Footer = () => (
   <footer className={classes.main}>
     <div className={classes.wrapper}>
-      <span className={classes.love}>Made with love in Saint-Petersburg</span>
+      <span className={classes.love}>Made with <span className={classes.loveIcon} /> in Saint-Petersburg</span>
       <span className={classes.copyright}>Copyright © 2016 Alexander Rokhlin</span>
     </div>
   </footer>
