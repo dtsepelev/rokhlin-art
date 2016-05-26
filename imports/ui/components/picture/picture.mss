@@ -10,10 +10,17 @@
 }
 
 .img {
-	cursor: zoom-in;
     width: 100%;
     height: auto;
     padding-bottom: 4px;
+    pointer-events: none;
+}
+
+@media (min-width: $tablet) {
+	.img {
+		cursor: zoom-in;
+		pointer-events: auto;
+	}
 }
 
 @media (min-width: $desktophd) {
