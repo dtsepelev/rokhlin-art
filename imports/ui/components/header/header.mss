@@ -7,8 +7,9 @@
     display: inline-block;
     float: right;
     color: $grey;
-    max-width: 160px;
+    max-width: 100px;
     text-align: right;
+    padding-left: 0px;
 }
 
 .menuElement {
@@ -27,6 +28,7 @@
     }
     .menu {
         padding-top: 3px;
+
         max-width: 100%;
     }
     .menuElement {
