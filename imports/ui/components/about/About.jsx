@@ -8,7 +8,6 @@ import { styles } from './about.mss'
 import { Text } from '../text/Text.jsx'
 
 const classes = {
-  main: 'row',
   image: classNames(styles.image, 'img-responsive'),
   imagesTop: classNames(styles.imagesTop, 'col-lg-3', 'visible-lg-block'),
   imagesBottom: classNames(styles.imagesBottom, 'hidden-lg'),
