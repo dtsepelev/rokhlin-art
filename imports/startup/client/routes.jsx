@@ -8,6 +8,7 @@ import { Header } from '/imports/ui/components/header/Header.jsx'
 import { Footer } from '/imports/ui/components/footer/Footer.jsx'
 import { About } from '/imports/ui/components/about/About.jsx'
 import { Contact } from '/imports/ui/components/contact/Contact.jsx'
+import { NotFound } from '/imports/ui/components/not-found/NotFound.jsx'
 
 import GalleryList from '/imports/ui/containers/GalleryList.jsx'
 import PicturesList from '/imports/ui/containers/PicturesList.jsx'
@@ -59,3 +60,14 @@ FlowRouter.route('/contact', {
     })
   },
 })
+
+FlowRouter.notFound = {
+  name: '404',
+  action() {
+    mount(Layout, {
+      header: (<Header />),
+      content: (<NotFound />),
+      footer: (<Footer />),
+    })
+  },
+};
