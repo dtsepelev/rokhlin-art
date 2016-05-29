@@ -39,11 +39,11 @@
   ],
 
   "settings": {
-  	"import/ignore": ["node_modules", \.(scss|less|mss)$],
   	"import/resolver": {
   		"meteor": {
   			"extensions": [".js", ".jsx"]
   		}
-  	}
+  	},
+  	"import/ignore": ["node_modules", ".(css|mss)$"]
   }
 }
