@@ -5,27 +5,37 @@
 }
 
 @media (min-width: $tablet) {
-	pointer-events: auto;
+    pointer-events: auto;
 }
 
 .main_zoomed {
     .img {
-    	cursor: zoom-out;
+        cursor: zoom-out;
     }
 }
 
 .img {
-    width: 100%;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
     height: auto;
     padding-bottom: 4px;
     pointer-events: none;
 }
 
+@media (min-width: 464px) {
+    .img {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
 @media (min-width: $tablet) {
-	.img {
-		cursor: zoom-in;
-		pointer-events: auto;
-	}
+    .img {
+        cursor: zoom-in;
+        pointer-events: auto;
+    }
 }
 
 @media (min-width: $desktophd) {
@@ -41,9 +51,7 @@
 }
 
 .hidden {
-    opacity: 0;
-    cursor: default;
-    pointer-events: none;
+    display: none;
 }
 
 .visible {

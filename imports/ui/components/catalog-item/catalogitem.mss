@@ -25,9 +25,7 @@
 }
 
 .hidden {
-    opacity: 0;
-    cursor: default;
-    pointer-events: none;
+    display: none;
 }
 
 .visible {
