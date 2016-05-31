@@ -1,17 +1,10 @@
 /* eslint max-len: 0 */
 
 import React, { Component } from 'react'
-import classNames from 'classnames'
 import { Text } from '../text/Text.jsx'
 
-const classes = {
-  firstLine: 'firstLine',
-  email: classNames('col-lg-6', 'h2'),
-  text: classNames('col-lg-6'),
-}
 
 const description = 'Автор с пониманием и благодарностью примет конструктивные предложения и замечания. Хотя нужно помнить, что художника обидеть каждый может, а ласковое слово и ему приятно.'
-
 
 export class Contact extends Component {
   componentDidMount() {
@@ -21,10 +14,10 @@ export class Contact extends Component {
   render() {
     return (
       <div>
-        <div className={classes.email}>
+        <div className='col-lg-6 h2'>
           <a href='mailto:info@rokhlinart.com'>info@rokhlinart.com</a>
         </div>
-        <div className={classes.text}>
+        <div className='col-lg-6'>
           <Text description={description} />
         </div>
       </div>

@@ -10,13 +10,6 @@ import { Loader } from '../loader/Loader.jsx'
 
 import { styles } from './gallery.mss'
 
-const classes = {
-  name: classNames('col-xs-12', 'col-lg-6'),
-  description: classNames('col-xs-12', 'col-lg-6'),
-  meta: classNames(styles.meta, 'clearfix'),
-  gridSize: classNames('masonryGridSize', 'col-sm-6'),
-  masonry: styles.masonry,
-}
 
 const options = {
   itemSelector: '.masonryItem',
@@ -148,9 +141,11 @@ export class Gallery extends Component {
 
     return (
       <div>
-        <div className={classes.meta}>
-          <h2 className={classes.name}>{this.props.gallery.name}</h2>
-          <div className={classes.description}>
+        <div className={classNames(styles.meta, 'clearfix')}>
+          <h2 className='col-xs-12 col-lg-6'>
+            {this.props.gallery.name}
+          </h2>
+          <div className='col-xs-12 col-lg-6'>
             <Text description={this.props.gallery.description} />
           </div>
         </div>
@@ -158,10 +153,10 @@ export class Gallery extends Component {
           id='masonry'
           options={options}
           ref={this.masonryRef}
-          className={classes.masonry}
+          className={styles.masonry}
         >
           {pictures}
-          <div className={classes.gridSize} />
+          <div className='col-sm-6 masonryGridSize' />
         </Masonry>
       </div>
     )

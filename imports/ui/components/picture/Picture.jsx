@@ -7,11 +7,6 @@ import RetinaImage from 'react-retina-image'
 
 import { styles } from './picture.mss'
 
-const classes = {
-  img: styles.img,
-  caption: 'caption',
-}
-
 
 export class Picture extends Component {
   constructor(props) {
@@ -57,20 +52,21 @@ export class Picture extends Component {
     classesMainState[styles.hidden] = this.props.hidden
     classesMainState[styles.visible] = !this.props.hidden
 
-    classes.main = classNames(styles.main,
-                              classesMainState,
-                              'masonryItem')
-
     return (
-      <div className={classes.main} onClick={this.handleZoom}>
+      <div
+        className={classNames(styles.main,
+                              classesMainState,
+                              'masonryItem')}
+        onClick={this.handleZoom}
+      >
         <RetinaImage
           src={this.props.url}
           alt={this.props.name}
           checkIfRetinaImgExists={false}
-          className={classes.img}
+          className={styles.img}
           ref='picture'
         />
-        <span className={classes.caption}>{this.props.name}</span>
+        <span className='caption'>{this.props.name}</span>
       </div>
     )
   }

@@ -15,10 +15,6 @@ const masonryOptions = {
   transitionDuration: 0,
 }
 
-const classes = {
-  masonry: styles.masonry,
-}
-
 
 export class Catalog extends Component {
   constructor(props) {
@@ -144,7 +140,7 @@ export class Catalog extends Component {
         <Masonry
           id='masonry'
           options={masonryOptions}
-          className={classes.masonry}
+          className={styles.masonry}
           ref={this.masonryRef}
         >
           {galleries}

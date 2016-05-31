@@ -2,19 +2,18 @@ import React from 'react'
 import { styles } from './header.mss'
 import classNames from 'classnames'
 
-const classes = {
-  main: classNames('container', styles.main),
-  menu: styles.menu,
-  menuElement: styles.menuElement,
-  logo: classNames(styles.logo, 'h1'),
-}
 
 export const Header = () => (
-  <header className={classes.main}>
-    <a href='/' className={classes.logo}>Александр Рохлин</a>
-    <ul className={classes.menu}>
-      <li className={classes.menuElement}><a href='/about'>О художнике</a></li>
-      <li className={classes.menuElement}><a href='/contact'>Контакты</a></li>
+  <header className={classNames('container', styles.main)}>
+    <a
+      href='/'
+      className={classNames(styles.logo, 'h1')}
+    >
+      Александр Рохлин
+    </a>
+    <ul className={styles.menu}>
+      <li className={styles.menuElement}><a href='/about'>О художнике</a></li>
+      <li className={styles.menuElement}><a href='/contact'>Контакты</a></li>
     </ul>
   </header>
 )

@@ -1,12 +1,9 @@
 import React from 'react'
 import { Text } from '../text/Text.jsx'
 
-const classes = {
-  main: 'col-xs-12',
-}
 
 export const NotFound = () => (
-  <div className={classes.main}>
+  <div className='col-xs-12'>
     <Text description='Старались изо всех сил, но похоже такая страница не существует :(' />
   </div>
 )

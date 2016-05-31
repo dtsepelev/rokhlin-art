@@ -2,19 +2,16 @@ import React from 'react'
 import { styles } from './footer.mss'
 import classNames from 'classnames'
 
-const classes = {
-  main: styles.main,
-  wrapper: classNames(styles.wrapper, 'container'),
-  love: 'hidden-xs',
-  copyright: styles.copyright,
-  loveIcon: styles.loveIcon,
-}
 
 export const Footer = () => (
-  <footer className={classes.main}>
-    <div className={classes.wrapper}>
-      <span className={classes.love}>Made with <span className={classes.loveIcon} /> in Saint-Petersburg</span>
-      <span className={classes.copyright}>Copyright © 2016 Alexander Rokhlin</span>
+  <footer className={styles.main}>
+    <div className={classNames(styles.wrapper, 'container')}>
+      <span className='hidden-xs'>
+        Made with <span className={styles.loveIcon} /> in Saint-Petersburg
+      </span>
+      <span className={styles.copyright}>
+        Copyright © 2016 Alexander Rokhlin
+      </span>
     </div>
   </footer>
 )
