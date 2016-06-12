@@ -4,6 +4,7 @@ import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 import smoothScroll from 'smoothscroll'
 import RetinaImage from 'react-retina-image'
+import shallowCompare from 'react-addons-shallow-compare'
 
 import { styles } from './picture.mss'
 
@@ -17,9 +18,13 @@ export class Picture extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    // Skip re-rendering if this.state.resizing
-    // was changed to false
-    return !(this.state.resizing && !nextState.resizing)
+    /**
+     * Skips re-rendering if props/states propreties
+     * did not changed or this.state.resizing
+     * changing to false
+     */
+    return shallowCompare(this, nextProps, nextState) &&
+      !(this.state.resizing && !nextState.resizing)
   }
 
   componentDidUpdate() {

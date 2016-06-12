@@ -1,34 +1,40 @@
-import React, { PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { FlowRouter } from 'meteor/kadira:flow-router'
 import classNames from 'classnames/bind'
 import RetinaImage from 'react-retina-image'
+import shallowCompare from 'react-addons-shallow-compare'
 
 import { styles } from './catalogitem.mss'
 
 
-export const CatalogItem = ({ name, cover, slug, hidden }) => {
-  // Hiding pictures, until they would be loaded
-  const imgState = {}
-  imgState[styles.hidden] = hidden
-  imgState[styles.visible] = !hidden
+export class CatalogItem extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    return shallowCompare(this, nextProps, nextState)
+  }
 
+  render() {
+    const imgState = {}
+    imgState[styles.hidden] = this.props.hidden
+    imgState[styles.visible] = !this.props.hidden
 
-  return (
-    <div
-      className={classNames(imgState, 'col-sm-6', styles.main, 'masonryItem')}
-      onClick={() => { FlowRouter.go('gallery', { slug }) }}
-    >
-      <div className={styles.imgWrapper}>
-        <RetinaImage
-          src={cover}
-          alt={name}
-          className={styles.img}
-        />
-        <span>{name}</span>
+    return (
+      <div
+        className={classNames(imgState, 'col-sm-6', styles.main, 'masonryItem')}
+        onClick={() => { FlowRouter.go('gallery', { slug: this.props.slug }) }}
+      >
+        <div className={styles.imgWrapper}>
+          <RetinaImage
+            src={this.props.cover}
+            alt={this.props.name}
+            className={styles.img}
+          />
+          <span>{this.props.name}</span>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
+
 
 CatalogItem.propTypes = {
   name: PropTypes.string.isRequired,
