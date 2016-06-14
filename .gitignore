@@ -1,5 +1,10 @@
 node_modules/
 .deploy
-imports/startup/server/data.js
-public/gallery
+imports/startup/server/rokhlinart.com.js
 rokhlin.sublime-workspace
+
+!public/gallery
+
+public/gallery/*
+!public/gallery/staryy_orel
+!public/gallery/autoportrait

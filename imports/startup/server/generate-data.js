@@ -5,7 +5,7 @@ import { data } from './data.js'
 
 Meteor.startup(() => {
   console.log('Starting meteor')
-  if (Galleries.find().count() === 0) {
+  if (Galleries.find().count() === 0 && data) {
     console.log('Generating content')
 
     data.forEach(gallery => {
