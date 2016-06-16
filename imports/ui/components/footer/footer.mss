@@ -31,6 +31,12 @@
   }
 }
 
+@media (min-width: $desktop) {
+  .main {
+    height: 108px;
+  }
+}
+
 @media (min-width: $desktopmax) {
   .main {
     height: 144px;

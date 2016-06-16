@@ -45,6 +45,12 @@
   }
 }
 
+@media (min-width: $desktop) {
+  .main {
+    padding-top: 51px;
+  }
+}
+
 @media (min-width: $desktopmax) {
   .main {
     padding-top: 63px;
