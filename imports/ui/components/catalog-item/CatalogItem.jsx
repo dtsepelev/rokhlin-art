@@ -28,7 +28,11 @@ export class CatalogItem extends Component {
             alt={this.props.name}
             className={styles.img}
           />
-          <span>{this.props.name}</span>
+          <span
+            className={classNames('h2', styles.title)}
+          >
+            {this.props.name}
+          </span>
         </div>
       </div>
     )
