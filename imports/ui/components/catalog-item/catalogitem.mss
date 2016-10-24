@@ -29,7 +29,7 @@
 
 .title {
   position: absolute;
-  bottom: 0;
+  bottom: 18px;
   left: 0;
 
   margin-bottom: 0;
